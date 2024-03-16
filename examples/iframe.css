@@ -1,0 +1,156 @@
+.common-footer {
+  text-transform: uppercasse;
+  font-size: 12px;
+}
+
+.common-guide {
+  white-space: pre-wrap;
+  font-size: 14px;
+  font-family: Source Han Sans SC, Source Han Sans SC;
+  font-weight: 400;
+  color: #333333;
+}
+
+.common-header {
+  height: 100px;
+  text-align: start;
+  position: relative;
+}
+.common-header img {
+  width: 110px;
+  height: 100px;
+}
+.common-title {
+  position: absolute;
+  left: 295px;
+  top: 38px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+  line-height: 19px;
+}
+.common-description {
+  margin-top: 6px;
+  width: 100%;
+  border-collapse: collapse;
+}
+.common-description th,
+.common-description td {
+  font-size: 12px;
+  font-family: Source Han Sans SC, Source Han Sans SC;
+  font-weight: 400;
+  color: #000000;
+  padding: 1em;
+  border: 1px solid #dcdcdc;
+}
+
+.common-description td:nth-child(odd) {
+  width: 120px;
+  background: #ebedf1;
+}
+.common-description td:nth-child(even) {
+  width: 249px;
+}
+
+.common-evaluation {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.common-evaluation thead tr {
+  background: #ebedf1;
+}
+.common-evaluation thead tr th {
+  text-align: center;
+}
+.common-evaluation thead tr th:nth-child(1) {
+  width: 190px;
+}
+.common-evaluation thead tr th:nth-child(3) {
+  width: 131px;
+}
+
+.common-evaluation th,
+.common-evaluation td {
+  font-size: 12px;
+  font-family: Source Han Sans SC, Source Han Sans SC;
+  font-weight: 400;
+  color: #000000;
+  border: 1px solid #dcdcdc;
+  padding: 1em;
+}
+
+.common-date {
+  margin-top: 50px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 12px;
+  font-family: Source Han Sans SC, Source Han Sans SC;
+  color: #000000;
+  line-height: 16px;
+}
+.common-date span {
+  font-weight: 500;
+}
+.common-date .date {
+  text-align: center;
+  margin-left: 8px;
+  height: 24px;
+  width: 122px;
+  border-bottom: 1px solid #000000;
+  font-weight: 400;
+}
+
+@page {
+  size: A4 portrait;
+  margin: 30px;
+  margin-top: 130px;
+}
+
+.mate-pro {
+  page: mate-pro;
+}
+
+.mate-pro-header {
+  position: running(mateproHeaderRunning);
+}
+.mate-pro-footer {
+  position: running(mateproFooterRunning);
+}
+
+@page mate-pro {
+  @top-center {
+    content: element(mateproHeaderRunning);
+  }
+  @bottom-center {
+    content: element(mateproFooterRunning);
+  }
+  @bottom-left {
+    content: '第' counter(page) '页，共' counter(pages) '页';
+    font-size: 12px;
+  }
+}
+
+.mate {
+  page: mate;
+}
+
+.mate-header {
+  position: running(mateHeaderRunning);
+}
+.mate-footer {
+  position: running(mateFooterRunning);
+}
+
+@page mate {
+  @top-center {
+    content: element(mateHeaderRunning);
+  }
+  @bottom-center {
+    content: element(mateFooterRunning);
+  }
+  @bottom-left {
+    content: '第' counter(page) '页，共' counter(pages) '页';
+    font-size: 12px;
+  }
+}
