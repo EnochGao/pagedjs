@@ -28,6 +28,9 @@ class IframeTest {
 			this.render();
 		}, 500);
 	}
+	print() {
+		this.iframeEl.contentWindow.print();
+	}
 
 	render() {
 		this.iframeEl = document.createElement("iframe");
@@ -58,7 +61,7 @@ class IframeTest {
 		const scripts = `
             <!--paged.polyfill.min.js rendering is not normal. home page header is missing --> 
       
-            <script src="../dist/paged.polyfill.min.js" type="text/javascript"></script>
+            <script src="../dist/paged.polyfill.js" type="text/javascript"></script>
             
            
             <script>
@@ -140,4 +143,7 @@ const iframeTest = new IframeTest();
 iframeTest.render();
 function refresh() {
 	iframeTest.refresh();
+}
+function print() {
+	iframeTest.print();
 }
